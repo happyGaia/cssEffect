@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Effect: Transform scale</title>
+	<style type="text/css">
+		.outer-container{margin: 0 auto; width: 1024px;}
+		.inner-container{
+			border: 2px solid lightgray; background-color: #eee; 
+			width: 31%; float: left; 
+			transition: 0.2s ease-in-out;
+			-o-transition: 0.2s ease-in-out;
+			-moz-transition: 0.2s ease-in-out;
+			-webkit-transition: 0.2s ease-in-out;
+		}
+		.inner-container:hover{
+			transform: scale(1.2); 
+/*			-o-transform: scale(1.2); 
+			-moz-transform: scale(1.2); */
+			-webkit-transform: scale(1.2); /* Chrome, Safari, Opera */
+			-ms-transform: scale(1.2); /* IE 9 */
+			box-shadow: 3px 3px 10px #dddddd;
+			background-color: #ddd;
+		}
+		.inner-container > p{text-align: center;}
+
+		.clearfix{clear:both;}
+	</style>
+</head>
+<body>
+	<h3>Effect: Transform scale</h3>
+	box-shadow => IE9 up support => 參考<a href="http://boohover.pixnet.net/blog/post/35116159-%E9%99%B0%E5%BD%B1%E6%95%88%E6%9E%9C%E5%8F%8A%E5%85%89%E6%9A%88%E6%95%88%E6%9E%9C%E7%9A%84-box-shadow-(css-property)">Shadow desciption</a><br>
+	transform => IE9 up support<br>
+	transition => IE10 up support<br>
+	<br><br>
+	<div class="outer-container clearfix">
+		<div class="inner-container">
+			<p>AAA</p>
+		</div>
+		<div class="inner-container">
+			<p>BBB</p>
+		</div>
+		<div class="inner-container">
+			<p>CCC</p>
+		</div>
+	</div>
+</body>
+</html>

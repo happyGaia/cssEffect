@@ -8,7 +8,7 @@
 
 ## 實際畫面
 
-   * LINK 1, LINK 2, LINK 3為Nav/Menu，一開始畫面，會固定在藍色區塊(背景色)最下面，並沒有position:fixed在最上面。
+   * LINK 1, LINK 2, LINK 3為Nav/Menu。一開始畫面，會先固定在藍色區塊(背景色)最下面，並沒有position:fixed在最上面。
 
    <img src="https://github.com/happyGaia/cssEffect/raw/master/scroll-then-fix-nav/snapshots/scroll-then-fix-menu1.png" alt="PC+Pad (768px以上)" title="PC+Pad (768px以上)">
 

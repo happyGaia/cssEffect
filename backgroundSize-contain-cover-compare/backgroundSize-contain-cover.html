@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Compare css background size property contain and cover</title>
+	<style type="text/css">
+		.text-center{text-align: center;}
+		.ex{width: 24%;}
+		.ex2{width: 15%;}
+		.ex3{width: 50%;}
+		
+		.img{
+			background-repeat: no-repeat;
+			height: 100px;
+			float: left;
+			background-color: #3333FF;
+		}
+
+		.img1{background-image: url("./img/backgroundSizeImg.png");width: 26.5%;margin-right: 3%;}
+		.img2{background-image: url("./img/backgroundSizeImg2.png");width: 31%;margin-right: 3%;}
+		.img3{background-image: url("./img/backgroundSizeImg3.png");width: 35.5%;}
+
+		.contain{background-size: contain}
+		.cover{background-size: cover}
+
+		.cearfix:after{
+			content: ".";
+		    display: block;
+		    height: 0;
+		    clear: both;
+		    visibility: hidden;
+		}
+		.bored-red{border: 2px solid red}
+		.max-width{max-width: 100%;position: fixed;border:1px solid #393939;}
+	</style>
+</head>
+<body>
+	<h1 class="text-center">Compare css background size property contain and cover</h1>
+	<h2 class="text-center">分別比較在限定寬度比圖片小、限定寬度和圖片一樣大、限定寬度比圖片大，三種情況下css background-size:contain、background-size:cover呈現狀況。</h2>
+	<h3 class="text-center">background和img不一樣, background如果沒有用高+寬撐開，他是不占空間;相對，image就算不設寬高，也會占空間</h3>
+	<p class="text-center">用Chrome測試<br>參考:https://developer.mozilla.org/zh-CN/docs/Web/Guide/CSS/Scaling_background_images</p>
+	<h3>範例1:width與圖片大小一樣</h3>
+	<h4>background-size:contain</h4>
+	<div class="ex cearfix bored-red">
+		<div class="img img1 contain"><img src="./img/backgroundSizeImg.png" height="100" width="120" class="max-width"></div>
+		<div class="img img2 contain"><img src="./img/backgroundSizeImg.png" height="100" width="120" class="max-width"></div>
+		<div class="img img3 contain"><img src="./img/backgroundSizeImg.png" height="100" width="120" class="max-width"></div>
+
+	</div>
+	<h4>background-size:cover</h4>
+	<div class="ex cearfix bored-red">
+		<div class="img img1 cover"></div>
+		<div class="img img2 cover"></div>
+		<div class="img img3 cover"></div>
+	</div>
+	<br><br>
+	<h3>範例2:width比圖片小</h3>
+	<h4>background-size:contain</h4>
+	<div class="ex2 cearfix bored-red">
+		<div class="img img1 contain"></div>
+		<div class="img img2 contain"></div>
+		<div class="img img3 contain"></div>
+
+	</div>
+	<h4>background-size:cover</h4>
+	<div class="ex2 cearfix bored-red">
+		<div class="img img1 cover"></div>
+		<div class="img img2 cover"></div>
+		<div class="img img3 cover"></div>
+	</div>
+	<br><br>
+	<h3>範例3:width比圖片大</h3>
+	<h4>background-size:contain</h4>
+	<div class="ex3 cearfix bored-red">
+		<div class="img img1 w21 contain"></div>
+		<div class="img img2 w22 contain"></div>
+		<div class="img img3 w23 contain"></div>
+	</div>
+	<h4>background-size:cover</h4>
+	<div class="ex3 cearfix bored-red">
+		<div class="img img1 w21 cover"></div>
+		<div class="img img2 w22 cover"></div>
+		<div class="img img3 w23 cover"></div>
+	</div>
+	<br><br>
+	<h3>範例1</h3>
+	<h4>background-size:contain</h4>
+	<div class="ex cearfix bored-red">
+		<div class="img img1 contain">1112321312312312312312312313123131<br>1112321312312312312312312313123131</div>
+		<div class="img img2 contain"></div>
+		<div class="img img3 contain"></div>
+		
+	</div>
+	<h4>background-size:cover</h4>
+	<div class="ex cearfix bored-red">
+		<div class="img img1 cover">1112321312312312312312312313123131<br>1112321312312312312312312313123131</div>
+		<div class="img img2 cover"></div>
+		<div class="img img3 cover"></div>
+	</div>
+</body>
+</html>

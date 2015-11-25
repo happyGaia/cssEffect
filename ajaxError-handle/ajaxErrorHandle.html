@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Try: ajax handle errors</title>
+</head>
+<body>
+	according to http://api.jquery.com/ajaxerror/ <br><br>
+	<button class="trigger1">Trigger 1</button>
+	<button class="trigger2">Trigger 2</button>
+	<div class="result"></div><br>
+	<div class="log"></div>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+	<script type="text/javascript">
+		var msglog = "";
+		$( document ).ajaxError(function() {
+			$( ".log" ).text( msglog );
+		});
+
+		$( ".trigger1" ).on( "click", function() {
+			msglog = "";
+			msglog = "Triggered 1 ajaxError handler."
+			$( "div.result" ).load( "ajax/page1.html" );
+			
+		});
+
+		$( ".trigger2" ).on( "click", function() {
+			msglog = "";
+			msglog = "Triggered 2 ajaxError handler."
+			$( "div.result" ).load( "ajax/page2.html" );
+			
+		});
+	</script>
+</body>
+</html>

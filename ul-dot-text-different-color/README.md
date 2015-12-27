@@ -10,4 +10,4 @@
 
    * "點"和"文字"顏色不同
 
-   <img src="https://github.com/happyGaia/cssEffect/raw/master/transform-scale/snapshots/ul-li-dot.jpg" title="ul li"點"和"文字"顏色不同">
+   <img src="https://github.com/happyGaia/cssEffect/raw/master/ul-dot-text-different-color/snapshots/ul-li-dot.jpg" title="ul li"點"和"文字"顏色不同">
